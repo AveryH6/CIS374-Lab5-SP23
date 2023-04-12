@@ -160,9 +160,16 @@ namespace Lab5
         /// as discovered by a DFS.</returns>
         public Dictionary<Node, Node> DFS(Node startingNode)
         {
-            ResetNodeColor();
-
             Dictionary<Node, Node> pred = new Dictionary<Node, Node>();
+
+            // initialize the nodes and pred dictionary
+            foreach( var node in Nodes)
+            {
+                pred[node] = null;
+                node.Color = Color.White;
+            }
+
+            DFSVisit(startingNode, pred);
 
             return pred;
         }
@@ -170,6 +177,21 @@ namespace Lab5
         // TODO
         private void DFSVisit(Node node, Dictionary<Node,Node> pred)
         {
+            Console.WriteLine(node);
+            node.Color = Color.Gray;
+
+            // sort neighbors so that we will visit in alphabetical order
+            node.Neighbors.Sort();
+
+            foreach( var neighbor in node.Neighbors )
+            {
+                if( neighbor.Color == Color.White)
+                {
+                    pred[neighbor] = node;
+                    DFSVisit(neighbor, pred);
+                }
+            }
+            node.Color = Color.Black;
            
         }
 
@@ -229,7 +251,6 @@ namespace Lab5
                     str += ", ";
                 }
 
-                str += ".";
                 str += Environment.NewLine;
             }
             return str;
