@@ -6,7 +6,7 @@ namespace Lab5
     {
         static void Main(string[] args)
         {
-            UndirectedGraph undirectedGraph = new UndirectedGraph("../../../graphs/graph4.txt");
+            UndirectedGraph undirectedGraph = new UndirectedGraph("../../../graphs/Savannah.txt");
 
             Console.WriteLine(undirectedGraph);
 

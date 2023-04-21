@@ -127,7 +127,15 @@ namespace Lab5
                 //     if node is white
                 //        connectedComponents++
                 //        explore the neighbors
-                //        
+                //
+                foreach(var node in Nodes)
+                {
+                    if(node.Color == Color.White)
+                    {
+                        DFSVisit(node, new Dictionary<Node, Node>());
+                        connectedComponents++;
+                    }
+                }
 
                 return connectedComponents;
             }
@@ -144,8 +152,11 @@ namespace Lab5
         public bool IsReachable(string nodename1, string nodename2)
         {
             ResetNodeColor();
+            DFS(GetNodeByName(nodename1));
 
-            return false;
+            var node2 = GetNodeByName(nodename2);
+
+            return node2.Color == Color.Black;
         }
 
         // TODO
@@ -209,6 +220,36 @@ namespace Lab5
         {
             var resultDictionary = new Dictionary<Node, (Node pred, int dist)>();
 
+            //initialize the dictionary
+            foreach( var node in Nodes)
+            {
+                node.Color = Color.White;
+                resultDictionary[node] = (null, int.MaxValue);
+            }
+
+            // set up starting node
+            startingNode.Color = Color.Gray;
+            resultDictionary[startingNode] = (null, 0);
+
+            // Q = empty queue
+            Queue<Node> queue = new Queue<Node>();
+            queue.Enqueue(startingNode);
+
+            while( queue.Count > 0)
+            {
+                // u = head(Q)
+                var node = queue.Dequeue();
+                foreach( var neighbor in node.Neighbors)
+                {
+                    if( neighbor.Color == Color.White)
+                    {
+                        int distance = resultDictionary[node].Item2;
+                        resultDictionary[neighbor] = (node, distance + 1);
+                        neighbor.Color = Color.Gray;
+                        queue.Enqueue(neighbor);
+                    }
+                }
+            }
             
             return resultDictionary;
         }
@@ -223,6 +264,7 @@ namespace Lab5
         private bool DFSVisit(Node currentNode, Node endingNode)
         {
             // return true if endingNode is found
+            
 
             // return false if endingNode is NOT found after visiting ALL connected nodes
 

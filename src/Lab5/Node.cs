@@ -13,7 +13,7 @@ namespace Lab5
         public string Name { get; set; }
         public List<Node> Neighbors { get; set; }
         public Color Color { get; set; }
-        
+
         public Node(string name = "", Color color = Color.White)
         {
             Neighbors = new List<Node>();
