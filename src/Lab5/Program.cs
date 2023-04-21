@@ -6,15 +6,6 @@ namespace Lab5
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
-            UndirectedGraph undirectedGraph = new UndirectedGraph("../../../graphs/Savannah.txt");
-
-            Console.WriteLine(undirectedGraph);
-
-            var startingNode = undirectedGraph.GetNodeByName("i");
-
-            undirectedGraph.DFS(startingNode);
-=======
             UndirectedGraph undirectedGraph = new UndirectedGraph("../../../graphs/BeReal.txt");
 
             Console.WriteLine(undirectedGraph);
@@ -24,7 +15,6 @@ namespace Lab5
 
             Console.WriteLine(undirectedGraph.IsReachable("gb", "mw"));
 
->>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
         }
     }
 }

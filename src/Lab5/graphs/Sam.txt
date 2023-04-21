@@ -1,1 +1,19 @@
+<<<<<<< HEAD
 ﻿
+=======
+﻿#nodes
+uno dos tres cuatro cinco seis ocho nueve diez
+
+#edges
+uno dos
+dos tres
+tres cuatro
+cuatro cinco
+cinco seis
+sies ocho
+ocho nueve
+nueve diez
+
+#1 connected component
+# uno to diez is reachable 
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66

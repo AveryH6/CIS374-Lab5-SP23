@@ -1,1 +1,30 @@
+<<<<<<< HEAD
 ﻿
+=======
+﻿#nodes
+kc sm gb sf tb ah aw ew bt mw
+
+#edges
+sm kc
+sm aw
+gb sf
+gb kc
+sf kc
+sf tb
+tb aw
+tb kc
+tb ah
+tb gb
+ah kc
+ah aw 
+ew tb 
+ew kc
+ew bt
+ew mw
+kc mw
+mw bt
+bt kc
+
+# 1 connected component 
+# gb to mw is reachable 
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
