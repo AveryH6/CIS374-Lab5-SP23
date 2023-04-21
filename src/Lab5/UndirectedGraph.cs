@@ -173,7 +173,11 @@ namespace Lab5
         {
             Dictionary<Node, Node> pred = new Dictionary<Node, Node>();
 
+<<<<<<< HEAD
             // initialize the nodes and pred dictionary
+=======
+            // intialize nodes and the pred dictionary
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
             foreach( var node in Nodes)
             {
                 pred[node] = null;
@@ -191,19 +195,31 @@ namespace Lab5
             Console.WriteLine(node);
             node.Color = Color.Gray;
 
+<<<<<<< HEAD
             // sort neighbors so that we will visit in alphabetical order
             node.Neighbors.Sort();
 
             foreach( var neighbor in node.Neighbors )
             {
                 if( neighbor.Color == Color.White)
+=======
+            // sort the neighbors so that we will visit in alphabetical order
+            node.Neighbors.Sort();
+
+            foreach ( var neighbor in node.Neighbors )
+            {
+                if (neighbor.Color == Color.White)
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
                 {
                     pred[neighbor] = node;
                     DFSVisit(neighbor, pred);
                 }
             }
             node.Color = Color.Black;
+<<<<<<< HEAD
            
+=======
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
         }
 
         // TODO
@@ -220,13 +236,19 @@ namespace Lab5
         {
             var resultDictionary = new Dictionary<Node, (Node pred, int dist)>();
 
+<<<<<<< HEAD
             //initialize the dictionary
             foreach( var node in Nodes)
+=======
+            // initialize the dictionary
+            foreach(var node in Nodes)
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
             {
                 node.Color = Color.White;
                 resultDictionary[node] = (null, int.MaxValue);
             }
 
+<<<<<<< HEAD
             // set up starting node
             startingNode.Color = Color.Gray;
             resultDictionary[startingNode] = (null, 0);
@@ -245,11 +267,46 @@ namespace Lab5
                     {
                         int distance = resultDictionary[node].Item2;
                         resultDictionary[neighbor] = (node, distance + 1);
+=======
+            //setup starting node
+            startingNode.Color = Color.Gray;
+            resultDictionary[startingNode] = (null, 0);
+
+            // Q = empty Queue
+            Queue<Node> queue = new Queue<Node>();
+            queue.Enqueue(startingNode);
+
+            // iteratively traverse the graph
+
+            while( queue.Count > 0 )
+            {
+                // u = head(Q)
+                var node = queue.Peek();
+
+                // We should sort Neighbors first
+                node.Neighbors.Sort();
+
+                foreach( var neighbor in node.Neighbors )
+                {
+                    if( neighbor.Color == Color.White)
+                    {
+                        int distance = resultDictionary[node].ToTuple().Item2;
+                        resultDictionary[neighbor] = (node, distance+1);
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
                         neighbor.Color = Color.Gray;
                         queue.Enqueue(neighbor);
                     }
                 }
+<<<<<<< HEAD
             }
+=======
+
+                queue.Dequeue();
+                node.Color = Color.Black;
+               
+            }
+
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
             
             return resultDictionary;
         }
@@ -293,6 +350,10 @@ namespace Lab5
                     str += ", ";
                 }
 
+<<<<<<< HEAD
+=======
+                
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
                 str += Environment.NewLine;
             }
             return str;

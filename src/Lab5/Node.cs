@@ -8,7 +8,11 @@ namespace Lab5
         White, Gray, Black
     }
 
+<<<<<<< HEAD
     public class Node : IComparable<Node>
+=======
+    public class Node  : IComparable<Node>
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
     {
         public string Name { get; set; }
         public List<Node> Neighbors { get; set; }

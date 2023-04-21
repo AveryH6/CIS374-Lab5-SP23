@@ -11,9 +11,15 @@ namespace UnitTests
         {
             UndirectedGraph undirectedGraph = new UndirectedGraph("../../../graphs/graph1.txt");
 
+<<<<<<< HEAD
             Assert.IsTrue(undirectedGraph.IsReachable("a", "c"));
             Assert.IsTrue(undirectedGraph.IsReachable("e", "c"));
             Assert.IsTrue(undirectedGraph.IsReachable("d", "e"));
+=======
+            Assert.IsTrue(undirectedGraph.IsReachable("a", "c"));
+            Assert.IsTrue(undirectedGraph.IsReachable("e", "c"));
+            Assert.IsTrue(undirectedGraph.IsReachable("d", "e"));
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
             Assert.IsTrue(undirectedGraph.IsReachable("d", "c"));
         }
 
@@ -23,18 +29,31 @@ namespace UnitTests
             UndirectedGraph undirectedGraph = new UndirectedGraph("../../../graphs/graph1.txt");
 
             Assert.AreEqual(1, undirectedGraph.ConnectedComponents);
+<<<<<<< HEAD
         }
 
 
+=======
+        }
+
+
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
         [TestMethod]
         public void Graph2IsReachable()
         {
             UndirectedGraph undirectedGraph = new UndirectedGraph("../../../graphs/graph2.txt");
 
+<<<<<<< HEAD
             Assert.IsFalse(undirectedGraph.IsReachable("a", "c"));
             Assert.IsFalse(undirectedGraph.IsReachable("e", "c"));
             Assert.IsFalse(undirectedGraph.IsReachable("d", "e"));
             Assert.IsFalse(undirectedGraph.IsReachable("b", "a"));
+=======
+            Assert.IsFalse(undirectedGraph.IsReachable("a", "c"));
+            Assert.IsFalse(undirectedGraph.IsReachable("e", "c"));
+            Assert.IsFalse(undirectedGraph.IsReachable("d", "e"));
+            Assert.IsFalse(undirectedGraph.IsReachable("b", "a"));
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
             Assert.IsFalse(undirectedGraph.IsReachable("d", "b"));
 
         }
@@ -45,20 +64,35 @@ namespace UnitTests
             UndirectedGraph undirectedGraph = new UndirectedGraph("../../../graphs/graph2.txt");
 
             Assert.AreEqual(5, undirectedGraph.ConnectedComponents);
+<<<<<<< HEAD
         }
 
 
+=======
+        }
+
+
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
         [TestMethod]
         public void Graph3IsReachable()
         {
             UndirectedGraph undirectedGraph = new UndirectedGraph("../../../graphs/graph3.txt");
 
+<<<<<<< HEAD
             Assert.IsTrue(undirectedGraph.IsReachable("a", "c"));
             Assert.IsTrue(undirectedGraph.IsReachable("e", "d"));
             Assert.IsTrue(undirectedGraph.IsReachable("h", "g"));
 
             Assert.IsFalse(undirectedGraph.IsReachable("a", "h"));
             Assert.IsFalse(undirectedGraph.IsReachable("c", "i"));
+=======
+            Assert.IsTrue(undirectedGraph.IsReachable("a", "c"));
+            Assert.IsTrue(undirectedGraph.IsReachable("e", "d"));
+            Assert.IsTrue(undirectedGraph.IsReachable("h", "g"));
+
+            Assert.IsFalse(undirectedGraph.IsReachable("a", "h"));
+            Assert.IsFalse(undirectedGraph.IsReachable("c", "i"));
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
             Assert.IsFalse(undirectedGraph.IsReachable("g", "b"));
 
         }
@@ -68,7 +102,11 @@ namespace UnitTests
         {
             UndirectedGraph undirectedGraph = new UndirectedGraph("../../../graphs/graph3.txt");
 
+<<<<<<< HEAD
             Assert.AreEqual(3, undirectedGraph.ConnectedComponents);
+=======
+            Assert.AreEqual(2, undirectedGraph.ConnectedComponents);
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
         }
 
         [TestMethod]
@@ -76,11 +114,19 @@ namespace UnitTests
         {
             UndirectedGraph undirectedGraph = new UndirectedGraph("../../../graphs/graph4.txt");
 
+<<<<<<< HEAD
             Assert.IsTrue(undirectedGraph.IsReachable("a", "c"));
             Assert.IsTrue(undirectedGraph.IsReachable("e", "i"));
             Assert.IsTrue(undirectedGraph.IsReachable("g", "b"));
             Assert.IsTrue(undirectedGraph.IsReachable("c", "f"));
             Assert.IsTrue(undirectedGraph.IsReachable("a", "d"));
+=======
+            Assert.IsTrue(undirectedGraph.IsReachable("a", "c"));
+            Assert.IsTrue(undirectedGraph.IsReachable("e", "i"));
+            Assert.IsTrue(undirectedGraph.IsReachable("g", "b"));
+            Assert.IsTrue(undirectedGraph.IsReachable("c", "f"));
+            Assert.IsTrue(undirectedGraph.IsReachable("a", "d"));
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
             Assert.IsTrue(undirectedGraph.IsReachable("b", "i"));
 
         }
@@ -91,6 +137,7 @@ namespace UnitTests
             UndirectedGraph undirectedGraph = new UndirectedGraph("../../../graphs/graph4.txt");
 
             Assert.AreEqual(1, undirectedGraph.ConnectedComponents);
+<<<<<<< HEAD
         }
 
         // Savannah
@@ -118,6 +165,8 @@ namespace UnitTests
             UndirectedGraph undirectedGraph = new UndirectedGraph("../../../graphs/Savannah.txt");
 
             Assert.AreEqual(2, undirectedGraph.ConnectedComponents);
+=======
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
         }
     }
 }

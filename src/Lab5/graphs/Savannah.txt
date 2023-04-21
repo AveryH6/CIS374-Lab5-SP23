@@ -1,1 +1,21 @@
+<<<<<<< HEAD
 ﻿
+=======
+﻿# names of the nodes
+a b c d e f g h i j
+
+# edges
+g g
+h j
+e i 
+e g
+b j
+f e
+h g
+c e
+i j
+a b
+
+# 2 connected components
+# everything reachable except d
+>>>>>>> 9fb8601755d8e53f385c9858ccd629cf810e4d66
